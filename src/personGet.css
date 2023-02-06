@@ -1,4 +1,4 @@
-.App-card {
+/* .App-card {
     background-color: #282c34;
     min-height: 100vh;
     display: flex;
@@ -6,13 +6,13 @@
     row-gap: 10px;
     column-gap: 10px;
     flex-direction: row;
-    /* align-items: center; */
     justify-content: flex;
     font-size: calc(10px + 2vmin);
     color: white;
   }
 
-  .Card {
-    height: 400px;
+.InfiniteScroll {
+    /* height: 400px;
     width: 400px;
-  }
+    padding: 10px;
+} */

@@ -11,7 +11,6 @@ import InfiniteScroll from 'react-infinite-scroller'
 import './personGet.css';
 
 const baseURL = 'https://rickandmortyapi.com/api/character';
-let i = 0;
 
 export default function PersonList() {
   const [post, setPost] = React.useState([]);
@@ -32,7 +31,7 @@ export default function PersonList() {
           )
         )})
   };
-  console.log(post)
+  //console.log(post)
   if (!post) return null;
 
   return (
@@ -41,13 +40,14 @@ export default function PersonList() {
     <InfiniteScroll
           //datalength={i} //This is important field to render the next data
           //next={loadPersonList}
+          key={0}
           loadMore={loadPersonList}
           hasMore={true}
-          loader={<div className="text-center">loading data ...</div>}>
-          <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+          loader={<div key={0} className="text-center">loading data ...</div>}>
+          <Grid container spacing={{ xs: 2, md: 4 }} columns={{ xs: 4, sm: 8, md: 12 }}>
           {
             post.map((person) => (
-              <Grid item xs={2} sm={4} md={4} key={person.id}>
+              <Grid item xs={4} sm={4} md={4} key={person.id}>
                 {/* <Item>xs=2</Item> */}
 
                 <Card className="Card">
@@ -58,12 +58,12 @@ export default function PersonList() {
                     />
                     <CardMedia
                     component="img"
-                    height="194"
+                    height="300px"
                     image={person.image}
                     />
                     <CardContent>
-                      <Typography variant="body2" color="text.secondary">
-                        Person located on {person.location}
+                      <Typography variant="body1" color="text.secondary">
+                        Location: {person.location}
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
                         Created: {person.created}
