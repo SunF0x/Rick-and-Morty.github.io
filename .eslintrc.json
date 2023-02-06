@@ -5,7 +5,8 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:prettier/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -15,8 +16,36 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "prettier"
     ],
     "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+              "endOfLine": "auto"
+            }
+        ],
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/display-name": "off",
+        "react/jsx-key": "off",
+        "react/no-unescaped-entities": "off",
+        "react/no-render-return-value": "off",
+        "comma-dangle": ["error", "only-multiline"],
+        "curly": [1, "multi-line", "consistent"],
+        "no-extend-native": "off",
+        "space-in-parens": "off",
+        "no-console": "off",
+        "no-unused-vars": 1,
+        "linebreak-style": 0
+    },
+    "settings": {
+        "react": {
+          "version": "detect"
+        }
     }
 }
