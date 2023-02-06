@@ -1,6 +1,5 @@
-import React from 'react';
-// import './App.css';
 import PersonList from './PersonList';
+import React from 'react';
 
 function App() {
   return (

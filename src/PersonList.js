@@ -1,12 +1,13 @@
 import React from 'react';
 import axios from 'axios';
+
 import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import InfiniteScroll from 'react-infinite-scroller';
+import Typography from '@mui/material/Typography';
 
 const baseURL = 'https://rickandmortyapi.com/api/character';
 

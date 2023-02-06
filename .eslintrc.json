@@ -26,6 +26,13 @@
               "endOfLine": "auto"
             }
         ],
+        "sort-imports": ["error", {
+            "ignoreCase": false,
+            "ignoreDeclarationSort": false,
+            "ignoreMemberSort": false,
+            "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+            "allowSeparatedGroups": true
+        }],
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
