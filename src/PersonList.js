@@ -9,34 +9,41 @@ import Grid from '@mui/material/Grid';
 import InfiniteScroll from 'react-infinite-scroller';
 import Typography from '@mui/material/Typography';
 
-const baseURL = 'https://rickandmortyapi.com/api/character';
+const baseURL = 'https://rickandmortyapi.com/api/character?page=';
 
 export default function PersonList() {
   const [post, setPost] = React.useState([]);
 
-  const loadPersonList = () => {
-    axios.get(baseURL).then((response) => {
-      response.data.results.map((person) =>
-        setPost((post) => [
-          ...post,
-          {
-            id: post.length + 1, //Math.random().toString(16).slice(2),
-            name: person.name,
-            status: person.status,
-            image: person.image,
-            created: person.created,
-            location: person.location.name
-          }
-        ])
-      );
-    });
+  const loadPersonList = (page) => {
+    const NewPage = page++ % 43;
+    axios
+      .get(baseURL + NewPage)
+      .then((response) => {
+        response.data.results.map((person) =>
+          setPost((post) => [
+            ...post,
+            {
+              id: post.length + 1, //Math.random().toString(16).slice(2),
+              name: person.name,
+              status: person.status,
+              image: person.image,
+              created: person.created,
+              location: person.location.name
+            }
+          ])
+        );
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
-  //console.log(post)
+  // console.log(post);
   if (!post) return null;
 
   return (
     <InfiniteScroll
       key={0}
+      page={0}
       loadMore={loadPersonList}
       hasMore={true}
       loader={
