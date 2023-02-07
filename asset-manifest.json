@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Rick-and-Morty.github.io/static/css/main.4e9e48e7.css",
-    "main.js": "/Rick-and-Morty.github.io/static/js/main.74a70463.js",
+    "main.js": "/Rick-and-Morty.github.io/static/js/main.cbfe0bf1.js",
     "index.html": "/Rick-and-Morty.github.io/index.html",
     "main.4e9e48e7.css.map": "/Rick-and-Morty.github.io/static/css/main.4e9e48e7.css.map",
-    "main.74a70463.js.map": "/Rick-and-Morty.github.io/static/js/main.74a70463.js.map"
+    "main.cbfe0bf1.js.map": "/Rick-and-Morty.github.io/static/js/main.cbfe0bf1.js.map"
   },
   "entrypoints": [
     "static/css/main.4e9e48e7.css",
-    "static/js/main.74a70463.js"
+    "static/js/main.cbfe0bf1.js"
   ]
 }
